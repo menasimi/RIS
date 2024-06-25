@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Events{% endblock %}
+
+{% block content %}
+<h1>Manage Events</h1>
+<ul class="list-group">
+    {% for event in events %}
+        <li class="list-group-item">
+            <h5>{{ event.name }}</h5>
+            <p>{{ event.description }}</p>
+            <a class="btn btn-danger" href="{{ url_for('delete_event', event_id=event.id) }}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

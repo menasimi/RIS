@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Users{% endblock %}
+
+{% block content %}
+<h1>Manage Users</h1>
+<ul class="list-group">
+    {% for user in users %}
+        <li class="list-group-item">
+            <h5>{{ user.name }}</h5>
+            <p>Email: {{ user.email }}</p>
+            <a class="btn btn-danger" href="{{ url_for('delete_user', user_id=user.id) }}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

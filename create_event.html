@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Create Event{% endblock %}
+
+{% block content %}
+<h2>Create Event</h2>
+<form method="POST">
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Event Name" required>
+    </div>
+    <div class="form-group">
+        <input type="date" class="form-control" name="date" placeholder="Event Date" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="location" placeholder="Event Location" required>
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" name="description" placeholder="Event Description" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Event</button>
+</form>
+{% endblock %}

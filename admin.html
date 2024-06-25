@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<h1>Admin Panel</h1>
+<a class="btn btn-primary" href="{{ url_for('admin_users') }}">Manage Users</a>
+<a class="btn btn-primary" href="{{ url_for('admin_events') }}">Manage Events</a>
+{% endblock %}

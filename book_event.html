@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Book Event{% endblock %}
+
+{% block content %}
+<h2>Book Event</h2>
+<form method="POST">
+    <div class="form-group">
+        <label>Event: {{ event.name }}</label>
+    </div>
+    <div class="form-group">
+        <label>Date: {{ event.date }}</label>
+    </div>
+    <div class="form-group">
+        <label>Location: {{ event.location }}</label>
+    </div>
+    <div class="form-group">
+        <label>Description: {{ event.description }}</label>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" name="tickets" placeholder="Number of Tickets" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Book Now</button>
+</form>
+{% endblock %}
